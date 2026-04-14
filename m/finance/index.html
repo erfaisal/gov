@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry of Finance & Economy | Government of Cupx Nation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', system-ui, sans-serif;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-link {
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            background-color: #002266;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-[#003087] text-white text-xs py-1">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span>Government of Cupx Nation • Ministry of Finance & Economy</span>
+            <a href="/m/" class="hover:underline">← All Ministries</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b-2 border-[#FF9933]">
+        <div class="max-w-7xl mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="w-14 h-14 bg-[#003087] text-white rounded-full flex items-center justify-center text-4xl border-4 border-[#FF9933]">
+                        💰
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-[#003087]">Ministry of Finance &amp; Economy</h1>
+                        <p class="text-sm text-gray-500">Regulating the financial ecosystem of Cupx Nation</p>
+                    </div>
+                </div>
+                
+                <div class="flex gap-3">
+                    <a href="/" class="bg-white border border-gray-300 hover:bg-gray-50 px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                    <a href="/m/" class="bg-[#138808] hover:bg-green-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium flex items-center gap-2">
+                        <i class="fas fa-building"></i> Ministries
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-[#003087] to-[#002266] text-white py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl">
+                <span class="inline-block bg-white/20 text-xs px-4 py-1 rounded-full mb-4">Central Economic Authority</span>
+                <h2 class="text-5xl font-bold leading-tight mb-6">
+                    Building a Strong &amp; Secure Financial Nation
+                </h2>
+                <p class="text-blue-100 text-lg">
+                    We regulate all banks, manage taxation, issue business licenses, 
+                    oversee subsidies, and ensure smooth financial operations across the Cupx ecosystem.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            <!-- Left: About Ministry -->
+            <div class="lg:col-span-5">
+                <h3 class="text-3xl font-semibold text-[#003087] mb-6">About the Ministry</h3>
+                <div class="prose text-gray-600 leading-relaxed">
+                    <p class="mb-6">
+                        The Ministry of Finance &amp; Economy is responsible for the economic governance 
+                        of Cupx Nation. We operate the Central Bank, regulate all financial institutions, 
+                        collect taxes, and provide financial services to citizens and businesses.
+                    </p>
+                    <p>
+                        Our vision is to create a fully integrated, secure, and transparent financial ecosystem 
+                        where every transaction flows seamlessly between bank.cupx.in, cpays, amazx, and other services.
+                    </p>
+                </div>
+
+                <div class="mt-10 bg-white border border-gray-200 rounded-2xl p-8">
+                    <h4 class="font-semibold mb-4 flex items-center gap-2">
+                        <i class="fas fa-chart-line text-[#138808]"></i>
+                        Key Responsibilities
+                    </h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex gap-3">
+                            <span class="text-[#138808] font-bold">→</span>
+                            Regulation of all banks and payment systems
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-[#138808] font-bold">→</span>
+                            Collection and management of taxes (taxx)
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-[#138808] font-bold">→</span>
+                            Issuance of business and seller licenses
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-[#138808] font-bold">→</span>
+                            Distribution of subsidies and welfare
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-[#138808] font-bold">→</span>
+                            Oversight of your Central Bank
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right: Services -->
+            <div class="lg:col-span-7">
+                <h3 class="text-3xl font-semibold text-[#003087] mb-8">Our Key Services</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    
+                    <!-- Service 1 -->
+                    <div class="service-card bg-white border border-gray-200 rounded-2xl p-7">
+                        <div class="text-4xl mb-5">📊</div>
+                        <h4 class="font-semibold text-xl mb-2">taxx Portal</h4>
+                        <p class="text-gray-600 text-sm mb-6">
+                            File and pay income tax, GST, and other levies directly from your Cupx wallet.
+                        </p>
+                        <a href="#" onclick="alert('taxx service coming soon! (Static demo)')" 
+                           class="text-[#003087] text-sm font-medium flex items-center gap-2 hover:gap-3 transition">
+                            Access taxx <span>→</span>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card bg-white border border-gray-200 rounded-2xl p-7">
+                        <div class="text-4xl mb-5">🏦</div>
+                        <h4 class="font-semibold text-xl mb-2">Central Bank Regulation</h4>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Regulates your bank.cupx.in and all other financial institutions in Cupx Nation.
+                        </p>
+                        <a href="#" onclick="alert('Central Bank portal coming soon!')" 
+                           class="text-[#003087] text-sm font-medium flex items-center gap-2 hover:gap-3 transition">
+                            View Regulations <span>→</span>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card bg-white border border-gray-200 rounded-2xl p-7">
+                        <div class="text-4xl mb-5">📜</div>
+                        <h4 class="font-semibold text-xl mb-2">Business &amp; Seller Licenses</h4>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Apply for seller registration on amazx, manufacturer licenses, and import/export permits.
+                        </p>
+                        <a href="#" onclick="alert('License application portal coming soon!')" 
+                           class="text-[#003087] text-sm font-medium flex items-center gap-2 hover:gap-3 transition">
+                            Apply for License <span>→</span>
+                        </a>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card bg-white border border-gray-200 rounded-2xl p-7">
+                        <div class="text-4xl mb-5">🎟️</div>
+                        <h4 class="font-semibold text-xl mb-2">Subsidy &amp; Welfare</h4>
+                        <p class="text-gray-600 text-sm mb-6">
+                            Apply for government subsidies, cash transfers, and citizen welfare schemes.
+                        </p>
+                        <a href="#" onclick="alert('Subsidy portal coming soon!')" 
+                           class="text-[#003087] text-sm font-medium flex items-center gap-2 hover:gap-3 transition">
+                            Check Eligibility <span>→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats -->
+    <div class="bg-white py-12 border-t border-b">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-[#138808]">₹2.4 Cr</div>
+                    <div class="text-sm text-gray-500 mt-1">Taxes Collected Today</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-[#138808]">1,845</div>
+                    <div class="text-sm text-gray-500 mt-1">New Business Licenses</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-[#138808]">₹18.7 L</div>
+                    <div class="text-sm text-gray-500 mt-1">Subsidies Disbursed</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-[#138808]">98.4%</div>
+                    <div class="text-sm text-gray-500 mt-1">On-time Transactions</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#003087] text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-sm opacity-75">
+                Ministry of Finance &amp; Economy • Government of Cupx Nation<br>
+                Regulating the financial backbone of your digital nation
+            </p>
+            <p class="text-xs mt-6 text-blue-300">
+                Static demo page • All links are placeholders for now
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        console.log("%cMinistry of Finance page loaded", "color:#003087; font-weight:500");
+    </script>
+</body>
+                          </html>
