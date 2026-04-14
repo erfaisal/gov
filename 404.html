@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Government of Cupx Nation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', system-ui, sans-serif;
+        }
+        
+        .header-strip {
+            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+        }
+        
+        .chakra-spin {
+            animation: chakra-spin 25s linear infinite;
+        }
+        
+        @keyframes chakra-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+    <!-- Top Accessibility Bar -->
+    <div class="bg-[#003087] text-white text-xs py-1">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <a href="/" class="hover:underline flex items-center gap-1"><i class="fas fa-universal-access"></i> Screen Reader</a>
+            </div>
+            <div>
+                <span class="flex items-center gap-1"><i class="fas fa-clock"></i> Government of Cupx Nation</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-sm border-b-2 border-[#FF9933]">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center gap-4">
+                <!-- Emblem -->
+                <div class="w-14 h-14 bg-white border-4 border-[#FF9933] rounded-full flex items-center justify-center relative">
+                    <div class="w-9 h-9 bg-[#003087] rounded-full flex items-center justify-center text-white text-2xl">🇨🇺</div>
+                    <i class="fas fa-sun text-amber-400 text-3xl absolute chakra-spin"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold text-[#003087]">Government of Cupx Nation</h1>
+                    <p class="text-xs text-gray-500">gov.cupx.in • Official Portal</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 404 Content -->
+    <div class="flex-1 flex items-center justify-center py-20">
+        <div class="max-w-2xl mx-auto px-6 text-center">
+            <!-- Big 404 -->
+            <div class="mb-8">
+                <span class="text-[12rem] font-bold text-gray-200 leading-none select-none">404</span>
+            </div>
+
+            <div class="text-4xl font-semibold text-[#003087] mb-4">
+                Oops! Page Not Found
+            </div>
+            
+            <p class="text-xl text-gray-600 mb-10 max-w-md mx-auto">
+                The page you are looking for might have been removed, 
+                had its name changed, or is temporarily unavailable.
+            </p>
+
+            <!-- Helpful Options -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg mx-auto">
+                <!-- Go Home -->
+                <a href="/" 
+                   class="flex items-center justify-center gap-3 bg-[#003087] hover:bg-[#002266] text-white font-medium py-5 px-8 rounded-2xl transition-all">
+                    <i class="fas fa-home text-2xl"></i>
+                    <div>
+                        <div class="text-lg">Go to Homepage</div>
+                        <div class="text-xs opacity-75">gov.cupx.in</div>
+                    </div>
+                </a>
+
+                <!-- Ministries -->
+                <a href="/m/" 
+                   class="flex items-center justify-center gap-3 border-2 border-[#003087] hover:bg-white text-[#003087] font-medium py-5 px-8 rounded-2xl transition-all">
+                    <i class="fas fa-building text-2xl"></i>
+                    <div>
+                        <div class="text-lg">Browse Ministries</div>
+                        <div class="text-xs opacity-75">Identity • Finance • Transport</div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Search Box -->
+            <div class="mt-12 max-w-md mx-auto">
+                <p class="text-gray-500 mb-3 text-sm">Try searching for what you need:</p>
+                <div class="relative">
+                    <input 
+                        id="search-input"
+                        type="text" 
+                        placeholder="Search ministries, services or documents..." 
+                        onkeypress="if(event.key === 'Enter') performSearch()"
+                        class="w-full border border-gray-300 focus:border-[#FF9933] rounded-3xl py-4 px-6 text-sm outline-none">
+                    <button onclick="performSearch()" 
+                            class="absolute right-3 top-1/2 -translate-y-1/2 bg-[#003087] text-white px-8 py-2.5 rounded-3xl text-sm font-medium">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Common Links -->
+            <div class="mt-16 text-sm">
+                <p class="text-gray-500 mb-4">You may also visit:</p>
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-[#003087] underline">
+                    <a href="/m/identity/" class="hover:text-amber-600">DigiLocker</a>
+                    <a href="/m/finance/" class="hover:text-amber-600">Finance Ministry</a>
+                    <a href="/m/transport/" class="hover:text-amber-600">Transport Services</a>
+                    <a href="/m/labour/" class="hover:text-amber-600">Jobs Portal</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#003087] text-white py-8 text-center text-xs">
+        <div class="max-w-7xl mx-auto px-6">
+            © 2026 Government of Cupx Nation • All Rights Reserved<br>
+            <span class="opacity-75">This is a static demo website running on GitHub Pages</span>
+        </div>
+    </footer>
+
+    <script>
+        function performSearch() {
+            const query = document.getElementById('search-input').value.trim();
+            if (!query) {
+                alert("Please type something to search (e.g., 'aadhar', 'seller license', 'railway')");
+                return;
+            }
+            alert(`Searching for "${query}" across gov.cupx.in...\n\n(No results found in this static demo)\n\nTip: Try going back to the homepage.`);
+        }
+
+        // Easter egg: Press '/' to focus search
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '/' && document.getElementById('search-input') !== document.activeElement) {
+                e.preventDefault();
+                document.getElementById('search-input').focus();
+            }
+        });
+    </script>
+</body>
+  </html>
