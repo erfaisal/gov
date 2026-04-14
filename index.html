@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government of Cupx Nation | gov.cupx.in</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        :root {
+            --primary-blue: #003087;
+        }
+        
+        body {
+            font-family: 'Roboto', system-ui, sans-serif;
+        }
+        
+        .header-strip {
+            background: linear-gradient(to right, #FF9933, #FFFFFF, #138808);
+        }
+        
+        .nav-link {
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            background-color: #002266;
+            color: white;
+        }
+        
+        .ministry-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .ministry-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .flag-ashoka {
+            animation: chakra-spin 20s linear infinite;
+        }
+        
+        @keyframes chakra-spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .official-seal {
+            border: 3px solid #FF9933;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Accessibility Bar -->
+    <div class="bg-[#003087] text-white text-xs py-1">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <a href="#" class="hover:underline flex items-center gap-1"><i class="fas fa-universal-access"></i> Screen Reader</a>
+                <a href="#" onclick="changeFontSize()" class="hover:underline">A- A A</a>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <span class="flex items-center gap-1"><i class="fas fa-clock"></i> Last Updated: 15 April 2026</span>
+                <a href="https://cupx.in" target="_blank" class="hover:underline">Back to Cupx Ecosystem</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="bg-white shadow-sm border-b-2 border-[#FF9933]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-center justify-between py-4">
+                <!-- Left: Emblem + Title -->
+                <div class="flex items-center gap-4">
+                    <!-- Indian Flag Style Emblem -->
+                    <div class="w-16 h-16 bg-white border-4 border-[#FF9933] rounded-full flex items-center justify-center relative official-seal">
+                        <div class="w-10 h-10 bg-[#003087] rounded-full flex items-center justify-center text-white text-2xl font-bold">🇨🇺</div>
+                        <!-- Ashoka Chakra simulation -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-sun text-amber-400 text-4xl flag-ashoka"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-[#003087] leading-none">Government of<br>Cupx Nation</h1>
+                        <p class="text-xs text-gray-500 tracking-widest mt-1">gov.cupx.in</p>
+                    </div>
+                </div>
+
+                <!-- Right: Search + Login -->
+                <div class="flex items-center gap-6">
+                    <div class="relative w-80">
+                        <input 
+                            id="search-input"
+                            type="text" 
+                            placeholder="Search services, ministries, documents..." 
+                            onkeypress="if(event.key === 'Enter') performSearch()"
+                            class="w-full border border-gray-300 focus:border-[#FF9933] focus:ring-2 focus:ring-[#FF9933]/30 rounded-full py-3 px-5 text-sm outline-none">
+                        <button onclick="performSearch()" 
+                                class="absolute right-2 top-1/2 -translate-y-1/2 bg-[#003087] text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-[#002266]">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                    <a href="#" onclick="alert('Login with your Cupx ID (idex) coming soon!')" 
+                       class="flex items-center gap-2 bg-[#138808] hover:bg-green-700 text-white px-6 py-3 rounded-lg text-sm font-medium transition">
+                        <i class="fas fa-user"></i>
+                        <span>Citizen Login</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Bar -->
+        <nav class="bg-[#003087] text-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex items-center h-14 text-sm font-medium">
+                    <a href="/" class="nav-link px-6 py-4 h-full flex items-center">Home</a>
+                    <a href="/m/" class="nav-link px-6 py-4 h-full flex items-center">Ministries</a>
+                    <a href="/m/identity/" class="nav-link px-6 py-4 h-full flex items-center">Identity &amp; DigiLocker</a>
+                    <a href="/m/finance/" class="nav-link px-6 py-4 h-full flex items-center">Finance</a>
+                    <a href="/m/transport/" class="nav-link px-6 py-4 h-full flex items-center">Transport</a>
+                    <a href="/m/labour/" class="nav-link px-6 py-4 h-full flex items-center">Jobs &amp; Employment</a>
+                    <a href="/m/justice/" class="nav-link px-6 py-4 h-full flex items-center">Justice &amp; Grievance</a>
+                    <a href="#" class="nav-link px-6 py-4 h-full flex items-center ml-auto">Services</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <div class="bg-gradient-to-r from-[#003087] via-[#002266] to-[#003087] text-white py-16">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7">
+                <div class="inline-flex items-center bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full text-sm mb-6">
+                    <span class="bg-green-400 w-2 h-2 rounded-full animate-pulse mr-2"></span>
+                    Digital Sovereign Nation of Cupx
+                </div>
+                <h2 class="text-5xl font-bold leading-tight mb-6">
+                    One Nation.<br>One Digital Government.
+                </h2>
+                <p class="text-xl text-blue-100 max-w-lg">
+                    Official portal for all government services of Cupx Nation. 
+                    Your single window to IDs, licenses, banking regulation, and citizen services.
+                </p>
+                <div class="mt-10 flex gap-4">
+                    <a href="/m/identity/" 
+                       class="bg-white text-[#003087] font-semibold px-8 py-4 rounded-lg hover:bg-amber-50 transition flex items-center gap-3">
+                        <i class="fas fa-id-card text-xl"></i>
+                        Get Your Citizen ID
+                    </a>
+                    <a href="#" 
+                       class="border border-white/70 hover:bg-white/10 font-medium px-8 py-4 rounded-lg transition">
+                        Explore All Ministries
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right side visual -->
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="bg-white/10 backdrop-blur-md border border-white/30 rounded-2xl p-8 text-center max-w-xs">
+                    <div class="text-6xl mb-4">🪪</div>
+                    <h3 class="font-semibold text-2xl mb-2">idex</h3>
+                    <p class="text-blue-100">Your Universal Digital Identity</p>
+                    <div class="mt-6 pt-6 border-t border-white/30 text-sm">
+                        1,24,856 Citizens Registered<br>
+                        <span class="text-green-400">Today: 342 new</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- What is Gov.Cupx.in -->
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+            <div class="md:col-span-4">
+                <h2 class="text-3xl font-bold text-[#003087] mb-6">What is<br>Government of Cupx Nation?</h2>
+                <div class="prose text-gray-600">
+                    <p class="text-lg">
+                        gov.cupx.in is the official digital government platform of Cupx Nation.
+                        We issue citizen IDs, regulate banks, approve sellers &amp; drivers, 
+                        maintain DigiLocker, and provide seamless services across the entire Cupx ecosystem.
+                    </p>
+                </div>
+                <div class="mt-8 flex items-center gap-3 text-sm text-gray-500">
+                    <div class="h-px flex-1 bg-gray-300"></div>
+                    <span>🇨🇺 Sovereign Digital Nation</span>
+                    <div class="h-px flex-1 bg-gray-300"></div>
+                </div>
+            </div>
+            
+            <!-- Ministry Cards -->
+            <div class="md:col-span-8">
+                <h3 class="text-xl font-semibold mb-8 text-gray-700 flex items-center gap-3">
+                    <span>Our Ministries</span>
+                    <div class="h-px flex-1 bg-gray-200"></div>
+                </h3>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Card 1 -->
+                    <a href="/m/identity/" class="ministry-card bg-white border border-gray-200 rounded-xl p-6 hover:border-[#FF9933]">
+                        <div class="text-4xl mb-4">🪪</div>
+                        <h4 class="font-semibold text-lg mb-1">Ministry of Identity &amp; Citizenship</h4>
+                        <p class="text-sm text-gray-600">idex, DigiLocker, Birth/Death Certificates, Citizen Services</p>
+                        <div class="mt-6 text-[#003087] text-xs font-medium flex items-center gap-2">
+                            Visit Ministry <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 2 -->
+                    <a href="/m/finance/" class="ministry-card bg-white border border-gray-200 rounded-xl p-6 hover:border-[#FF9933]">
+                        <div class="text-4xl mb-4">💰</div>
+                        <h4 class="font-semibold text-lg mb-1">Ministry of Finance &amp; Economy</h4>
+                        <p class="text-sm text-gray-600">Tax, Subsidies, Licenses, Central Bank Regulation</p>
+                        <div class="mt-6 text-[#003087] text-xs font-medium flex items-center gap-2">
+                            Visit Ministry <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 3 -->
+                    <a href="/m/commerce/" class="ministry-card bg-white border border-gray-200 rounded-xl p-6 hover:border-[#FF9933]">
+                        <div class="text-4xl mb-4">🏭</div>
+                        <h4 class="font-semibold text-lg mb-1">Ministry of Commerce &amp; Industry</h4>
+                        <p class="text-sm text-gray-600">Seller Registration, Manufacturers, Quality Control</p>
+                        <div class="mt-6 text-[#003087] text-xs font-medium flex items-center gap-2">
+                            Visit Ministry <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 4 -->
+                    <a href="/m/transport/" class="ministry-card bg-white border border-gray-200 rounded-xl p-6 hover:border-[#FF9933]">
+                        <div class="text-4xl mb-4">🚂</div>
+                        <h4 class="font-semibold text-lg mb-1">Ministry of Transport &amp; Infrastructure</h4>
+                        <p class="text-sm text-gray-600">Railway, Airline, ISP, Driver Permits, Porter</p>
+                        <div class="mt-6 text-[#003087] text-xs font-medium flex items-center gap-2">
+                            Visit Ministry <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 5 -->
+                    <a href="/m/labour/" class="ministry-card bg-white border border-gray-200 rounded-xl p-6 hover:border-[#FF9933]">
+                        <div class="text-4xl mb-4">👷</div>
+                        <h4 class="font-semibold text-lg mb-1">Ministry of Labour &amp; Employment</h4>
+                        <p class="text-sm text-gray-600">Jobs Portal, Employment Certificates, Benefits</p>
+                        <div class="mt-6 text-[#003087] text-xs font-medium flex items-center gap-2">
+                            Visit Ministry <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- Card 6 -->
+                    <a href="/m/justice/" class="ministry-card bg-white border border-gray-200 rounded-xl p-6 hover:border-[#FF9933]">
+                        <div class="text-4xl mb-4">⚖️</div>
+                        <h4 class="font-semibold text-lg mb-1">Ministry of Justice &amp; Grievance</h4>
+                        <p class="text-sm text-gray-600">Courts, Dispute Resolution, Public Grievances</p>
+                        <div class="mt-6 text-[#003087] text-xs font-medium flex items-center gap-2">
+                            Visit Ministry <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Services -->
+    <div class="bg-white py-16 border-t border-b">
+        <div class="max-w-7xl mx-auto px-6">
+            <h3 class="text-center text-2xl font-semibold text-gray-800 mb-10">Popular Citizen Services</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div onclick="alert('Redirecting to DigiLocker... (static demo)')" class="cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 p-6 rounded-2xl text-center transition">
+                    <div class="text-5xl mb-4">📁</div>
+                    <p class="font-medium">DigiLocker</p>
+                    <p class="text-xs text-gray-500 mt-1">Secure Document Vault</p>
+                </div>
+                <div onclick="alert('Redirecting to idex...')" class="cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 p-6 rounded-2xl text-center transition">
+                    <div class="text-5xl mb-4">🆔</div>
+                    <p class="font-medium">Apply for idex</p>
+                    <p class="text-xs text-gray-500 mt-1">Universal Citizen ID</p>
+                </div>
+                <div onclick="alert('Redirecting to Tax Portal...')" class="cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 p-6 rounded-2xl text-center transition">
+                    <div class="text-5xl mb-4">📊</div>
+                    <p class="font-medium">Pay Taxes</p>
+                    <p class="text-xs text-gray-500 mt-1">taxx Portal</p>
+                </div>
+                <div onclick="alert('Redirecting to Grievance Portal...')" class="cursor-pointer bg-gray-50 hover:bg-white border border-gray-200 p-6 rounded-2xl text-center transition">
+                    <div class="text-5xl mb-4">📬</div>
+                    <p class="font-medium">File Grievance</p>
+                    <p class="text-xs text-gray-500 mt-1">Track your complaint</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#003087] text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-10">
+            <div class="md:col-span-5">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-3xl">🇨🇺</div>
+                    <div>
+                        <p class="font-semibold text-xl">Government of Cupx Nation</p>
+                        <p class="text-xs text-blue-300">Digital Sovereign Ecosystem</p>
+                    </div>
+                </div>
+                <p class="text-blue-200 max-w-sm">
+                    This is a self-contained digital nation built on cupx.in subdomains. 
+                    All services are regulated and powered by gov.cupx.in
+                </p>
+            </div>
+            
+            <div class="md:col-span-2">
+                <h5 class="font-medium mb-4 text-blue-300">Quick Links</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/m/identity/" class="hover:text-amber-300">DigiLocker</a></li>
+                    <li><a href="/m/finance/" class="hover:text-amber-300">Tax &amp; Finance</a></li>
+                    <li><a href="/m/transport/" class="hover:text-amber-300">Transport Services</a></li>
+                    <li><a href="#" class="hover:text-amber-300">Citizen Dashboard</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-2">
+                <h5 class="font-medium mb-4 text-blue-300">Important</h5>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-amber-300">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-amber-300">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-amber-300">Grievance Redressal</a></li>
+                    <li><a href="#" class="hover:text-amber-300">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="md:col-span-3">
+                <h5 class="font-medium mb-4 text-blue-300">Developed as Demo</h5>
+                <p class="text-xs text-blue-200 leading-relaxed">
+                    This website is built with pure HTML + Tailwind CSS for GitHub Pages deployment.<br><br>
+                    Fully static • No backend on this page
+                </p>
+                <div class="mt-6 text-xs flex items-center gap-2 text-amber-300">
+                    <i class="fas fa-flag"></i>
+                    <span>Proudly part of Cupx Ecosystem</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="border-t border-blue-800 mt-16 pt-8">
+            <div class="max-w-7xl mx-auto px-6 text-center text-xs text-blue-300">
+                © 2026 Government of Cupx Nation • All Rights Reserved • Made for demonstration &amp; learning purposes
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        
+        function performSearch() {
+            const query = document.getElementById('search-input').value.trim();
+            if (!query) {
+                alert("Please enter something to search (e.g., 'aadhar', 'seller license', 'jobs')");
+                return;
+            }
+            // For static GitHub Pages - show alert with demo results
+            alert(`Search results for "${query}"\n\n(This is a static demo. In full version this would show real results from pages.json)\n\nFound:\n• DigiLocker - Aadhaar Card\n• Ministry of Finance - Tax Services\n• Jobs Portal - Employment Opportunities`);
+        }
+        
+        function changeFontSize() {
+            alert("Font size adjustment demo (static page). In real version this would increase/decrease text size.");
+        }
+        
+        // Keyboard shortcut hint
+        console.log("%c👋 Welcome to gov.cupx.in - Your Digital Nation Government Portal", "color:#003087; font-weight:bold");
+    </script>
+</body>
+  </html>
