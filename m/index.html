@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministries | Government of Cupx Nation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', system-ui, sans-serif;
+        }
+        
+        .ministry-card {
+            transition: all 0.3s ease;
+        }
+        
+        .ministry-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        
+        .nav-link {
+            transition: all 0.2s;
+        }
+        
+        .nav-link:hover {
+            background-color: #002266;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Bar -->
+    <div class="bg-[#003087] text-white text-xs py-1">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <span>Government of Cupx Nation • Official Portal</span>
+            <a href="/" class="hover:underline">← Back to gov.cupx.in Home</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b-2 border-[#FF9933]">
+        <div class="max-w-7xl mx-auto px-6 py-5">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#003087] text-white rounded-full flex items-center justify-center text-3xl border-4 border-[#FF9933]">
+                        🇨🇺
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-[#003087]">Government of Cupx Nation</h1>
+                        <p class="text-sm text-gray-500">List of Ministries</p>
+                    </div>
+                </div>
+                
+                <a href="/" 
+                   class="bg-[#138808] hover:bg-green-700 text-white px-6 py-3 rounded-lg text-sm font-medium flex items-center gap-2">
+                    <i class="fas fa-home"></i>
+                    Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-[#003087] mb-3">Our Ministries</h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                The Government of Cupx Nation operates through dedicated ministries 
+                that regulate and serve every part of the Cupx digital ecosystem.
+            </p>
+        </div>
+
+        <!-- Ministries Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Ministry 1 -->
+            <a href="/m/identity/" class="ministry-card bg-white border border-gray-200 rounded-2xl p-8 group">
+                <div class="text-6xl mb-6">🪪</div>
+                <h3 class="text-2xl font-semibold text-[#003087] mb-2">Ministry of Identity &amp; Citizenship</h3>
+                <p class="text-gray-600 mb-8">idex • DigiLocker • Birth/Death Certificates • Citizen Registration</p>
+                <div class="flex items-center text-[#003087] text-sm font-medium group-hover:gap-3 transition-all">
+                    Visit Ministry 
+                    <span class="ml-2 text-xl group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+
+            <!-- Ministry 2 -->
+            <a href="/m/finance/" class="ministry-card bg-white border border-gray-200 rounded-2xl p-8 group">
+                <div class="text-6xl mb-6">💰</div>
+                <h3 class="text-2xl font-semibold text-[#003087] mb-2">Ministry of Finance &amp; Economy</h3>
+                <p class="text-gray-600 mb-8">Taxx • Subsidies • Business Licenses • Central Bank Regulation</p>
+                <div class="flex items-center text-[#003087] text-sm font-medium group-hover:gap-3 transition-all">
+                    Visit Ministry 
+                    <span class="ml-2 text-xl group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+
+            <!-- Ministry 3 -->
+            <a href="/m/commerce/" class="ministry-card bg-white border border-gray-200 rounded-2xl p-8 group">
+                <div class="text-6xl mb-6">🏭</div>
+                <h3 class="text-2xl font-semibold text-[#003087] mb-2">Ministry of Commerce &amp; Industry</h3>
+                <p class="text-gray-600 mb-8">Seller Registration • Manufacturers • Quality Control for Amazx</p>
+                <div class="flex items-center text-[#003087] text-sm font-medium group-hover:gap-3 transition-all">
+                    Visit Ministry 
+                    <span class="ml-2 text-xl group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+
+            <!-- Ministry 4 -->
+            <a href="/m/transport/" class="ministry-card bg-white border border-gray-200 rounded-2xl p-8 group">
+                <div class="text-6xl mb-6">🚂</div>
+                <h3 class="text-2xl font-semibold text-[#003087] mb-2">Ministry of Transport &amp; Infrastructure</h3>
+                <p class="text-gray-600 mb-8">Railway • Airline • ISP • Driver Permits • Porter Services</p>
+                <div class="flex items-center text-[#003087] text-sm font-medium group-hover:gap-3 transition-all">
+                    Visit Ministry 
+                    <span class="ml-2 text-xl group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+
+            <!-- Ministry 5 -->
+            <a href="/m/labour/" class="ministry-card bg-white border border-gray-200 rounded-2xl p-8 group">
+                <div class="text-6xl mb-6">👷</div>
+                <h3 class="text-2xl font-semibold text-[#003087] mb-2">Ministry of Labour &amp; Employment</h3>
+                <p class="text-gray-600 mb-8">Jobsx Portal • Employment Certificates • Benefits</p>
+                <div class="flex items-center text-[#003087] text-sm font-medium group-hover:gap-3 transition-all">
+                    Visit Ministry 
+                    <span class="ml-2 text-xl group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+
+            <!-- Ministry 6 -->
+            <a href="/m/justice/" class="ministry-card bg-white border border-gray-200 rounded-2xl p-8 group">
+                <div class="text-6xl mb-6">⚖️</div>
+                <h3 class="text-2xl font-semibold text-[#003087] mb-2">Ministry of Justice &amp; Grievance</h3>
+                <p class="text-gray-600 mb-8">Courts • Dispute Resolution • Public Grievances</p>
+                <div class="flex items-center text-[#003087] text-sm font-medium group-hover:gap-3 transition-all">
+                    Visit Ministry 
+                    <span class="ml-2 text-xl group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+
+            <!-- Ministry 7 (Information) -->
+            <a href="/m/information/" class="ministry-card bg-white border border-gray-200 rounded-2xl p-8 group">
+                <div class="text-6xl mb-6">📢</div>
+                <h3 class="text-2xl font-semibold text-[#003087] mb-2">Ministry of Information &amp; Broadcasting</h3>
+                <p class="text-gray-600 mb-8">Notices • Citizen Dashboard • Announcements • Electionx</p>
+                <div class="flex items-center text-[#003087] text-sm font-medium group-hover:gap-3 transition-all">
+                    Visit Ministry 
+                    <span class="ml-2 text-xl group-hover:translate-x-1 transition">→</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#003087] text-white py-12 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="text-sm opacity-75">
+                © 2026 Government of Cupx Nation • All services are part of the Cupx digital ecosystem
+            </p>
+            <p class="text-xs mt-4 text-blue-300">
+                Static website hosted on GitHub Pages • Designed to look and feel like an official government portal
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple search hint
+        console.log("%cMinistries page loaded successfully", "color:#003087; font-weight:500");
+    </script>
+</body>
+  </html>
